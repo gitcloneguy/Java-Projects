@@ -1,2 +1,3 @@
 language: java
-os: windows
+script:
+  - jdk_switcher use oraclejdk1.8
