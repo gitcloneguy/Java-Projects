@@ -1,2 +1,0 @@
-- name: Build App Inventor Extension
-  uses: ysfchn/appinventor-aix-action@v1.1
