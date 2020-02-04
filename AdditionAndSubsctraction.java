@@ -1,4 +1,3 @@
-package uuuu;
 import java.util.*;
 public class AdditionAndSubsctraction {
 
