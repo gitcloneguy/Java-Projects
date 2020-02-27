@@ -17,7 +17,7 @@ public class Tip {
 			
 			double tip= sc.nextDouble(); //read/store in double tip the amount of tip
 			double d=sub*tip/100; //calculate the tip by using formula subtotal*percentageDesired/100
-			double j=d+sub; // calculate total after tio
+			double j=d+sub; // calculate total after tip
 			
 			long endTime = System.nanoTime();
 			long duration = (endTime - startTime);
@@ -30,7 +30,7 @@ public class Tip {
 			
 			}
 			
-			catch(Exception e) { // u may ask why exception e, i seen on internet that its to catch ALL exeptions not just a specific type
+			catch(Exception e) {
 				System.out.println("That is an invalid imput/the number is too big."); 
 			}
 			

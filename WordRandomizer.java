@@ -5,15 +5,15 @@ public class WordRandomizer {
 	public static void main(String[] args) {
 		
 		int d=31;
-		while(d==31) {
 		Scanner sc = new Scanner(System.in);
+		while(d==31) {
 		System.out.println("enter words");
 		String cards = sc.nextLine();
 		
         cards = shuffle(cards);
         System.out.println("Shuffled  = " + cards);
 		}
-        
+        sc.close();
      }
 
     static String shuffle(String cards){

@@ -1,3 +1,4 @@
+package uuuu;
 import java.util.*;
 public class AdditionAndSubsctraction {
 
@@ -6,23 +7,111 @@ public class AdditionAndSubsctraction {
 		int i = 0;
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("please select addition, substraction, division, or multiplication.");
+		
+		String sign = sc.nextLine();
+		
+		System.out.println("What would you like to be the max for the numbers? (I.e. x - x)");
+		
+		int max = sc.nextInt();
+		
 		System.out.println("how many questions would you like?");
 	
 			int q = sc.nextInt();
-
 			long startTime = System.nanoTime();
-			
 			int[] answers = new int[q];
 			
+			if(sign.equals("multiplication")) {
+				while(i!=q) {
+					Random rd = new Random();
+					
+					int a = rd.nextInt(max);
+					int b = rd.nextInt(max);
+					int c = a * b;
+
+					try {
+					System.out.println("what is " +a +" × " +b +" =");
+					answers[i] = c;
+					
+					if(sc.nextInt()==c) {
+						score++;
+					}
+					}
+					catch(Exception e) {
+						System.out.println("Invalid imput, please re-run program");
+					}
+					
+					
+					i++;
+					
+				 }
+			}
+			
+			if(sign.equals("division")) {
+				while(i!=q) {
+					Random rd = new Random();
+					
+					int a = rd.nextInt(max);
+					int b = rd.nextInt(max);
+					int c = a / b;
+
+					try {
+					System.out.println("what is " +a +" ÷ " +b +" =");
+					answers[i] = c;
+					
+					if(sc.nextInt()==c) {
+						score++;
+					}
+					}
+					catch(Exception e) {
+						System.out.println("Invalid imput, please re-run program");
+					}
+					
+					
+					i++;
+					
+				 }
+			}
+		
+			
+			if(sign.equals("substraction")) {
+				
+				while(i!=q) {
+					Random rd = new Random();
+					
+					int a = rd.nextInt(max);
+					int b = rd.nextInt(max);
+					int c = a - b;
+
+					try {
+					System.out.println("what is " +a +" - " +b +" =");
+					answers[i] = c;
+					
+					if(sc.nextInt()==c) {
+						score++;
+					}
+					}
+					catch(Exception e) {
+						System.out.println("Invalid imput, please re-run program");
+					}
+					
+					
+					i++;
+					
+				 }
+			}
+			
+			if(sign.equals("addition")) {
+
 		while(i!=q) {
 		Random rd = new Random();
 		
-		int a = rd.nextInt(150);
-		int b = rd.nextInt(150);
-		int c = a - b;
+		int a = rd.nextInt(max);
+		int b = rd.nextInt(max);
+		int c = a + b;
 
 		try {
-		System.out.println("what is " +a +" - " +b +" =");
+		System.out.println("what is " +a +" + " +b +" =");
 		answers[i] = c;
 		
 		if(sc.nextInt()==c) {
@@ -37,6 +126,7 @@ public class AdditionAndSubsctraction {
 		i++;
 		
 	 }
+			}
 		long endTime = System.nanoTime();
 		long duration = (endTime - startTime);
 		double seconds = (double)duration / 1_000_000_000.0;
