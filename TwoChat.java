@@ -137,7 +137,9 @@ import javax.swing.JButton;
 	    messages.setText("Cannot connect!");
 	      try {
 	          TimeUnit.SECONDS.wait(3);
-	      } catch (InterruptedException ex1) {}
+	      } catch (InterruptedException ex1) {
+	    	  System.out.println();
+	      }
 	    System.exit(0);
 	    }
 	 }
