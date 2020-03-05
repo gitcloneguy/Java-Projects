@@ -15,5 +15,5 @@ steps:
   
 
 - script: |
-    bash <(curl -s https://codecov.io/bash)
+   codecov
   displayName: 'Run a multi-line script'
