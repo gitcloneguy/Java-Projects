@@ -15,5 +15,6 @@ steps:
   
 
 - script: |
+   CODECOV_TOKEN="0637b6aa-9521-4d41-9743-afe68a5c3c13"
    bash <(curl -s https://codecov.io/bash)
   displayName: 'Run a multi-line script'
