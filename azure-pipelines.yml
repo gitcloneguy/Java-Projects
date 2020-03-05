@@ -1,7 +1,4 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+
 
 
 trigger:
@@ -11,11 +8,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
+- script: sudo apt-get update -y && sudo apt-get upgrade -y
   displayName: 'Run a one-line script'
   
 
 - script: |
    CODECOV_TOKEN="0637b6aa-9521-4d41-9743-afe68a5c3c13"
    bash <(curl -s https://codecov.io/bash)
+   
   displayName: 'Run a multi-line script'
