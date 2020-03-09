@@ -18,5 +18,5 @@ steps:
     echo compiling...
     javac Col.java
     echo running...
-    java Col.java
+    java Col
   displayName: 'Run a multi-line script'
