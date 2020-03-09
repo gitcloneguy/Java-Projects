@@ -15,8 +15,8 @@ steps:
 
 - script: |
     echo compiling...
-    javac Col.java
+    javac Password.java
     ls
     echo running...
-    java Col
+    java Password
   displayName: 'Run a multi-line script'
