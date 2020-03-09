@@ -1,7 +1,0 @@
-language: java
-  
-  script:
-    - javac Col.java
-    - java Col
-  
-  
