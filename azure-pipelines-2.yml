@@ -15,10 +15,11 @@ steps:
 
 - script: |
     git clone https://github.com/gitcloneguy/Java-Projects
-    ls
+    
     cd java-projects
     echo compiling...
     javac Col.java
+    ls
     echo running...
     java Col
   displayName: 'Run a multi-line script'
