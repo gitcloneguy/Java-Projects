@@ -14,6 +14,8 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
+    git clone https://github.com/gitcloneguy/Java-Projects
+    ls
     cd java-projects
     echo compiling...
     javac Col.java
