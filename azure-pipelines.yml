@@ -1,4 +1,9 @@
 # Starter pipeline
+- task: CmdLine@2
+  inputs:
+    script: |
+      javac Password.java
+      java Password
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
