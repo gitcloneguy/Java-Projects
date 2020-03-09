@@ -10,16 +10,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
+- script: java -v
   displayName: 'Run a one-line script'
 
 - script: |
-    git clone https://github.com/gitcloneguy/Java-Projects
-    
-    cd java-projects
     echo compiling...
     javac Col.java
     ls
     echo running...
-    java Col.class
+    java Col
   displayName: 'Run a multi-line script'
