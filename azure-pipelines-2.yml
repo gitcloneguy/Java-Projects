@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: java -v
+- script: sudo apt-get install openjdk-8-jdk -y
   displayName: 'Run a one-line script'
 
 - script: |
