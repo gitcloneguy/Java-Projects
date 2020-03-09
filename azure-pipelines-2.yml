@@ -18,5 +18,5 @@ steps:
     javac Password.java
     ls
     echo running...
-    java uuuu.Password
+    java Password
   displayName: 'Run a multi-line script'
