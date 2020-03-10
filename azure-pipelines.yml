@@ -8,15 +8,21 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: sudo apt-get install openjdk-8-jdk-headless -y
+  displayName: 'install jdk8'
 
 - script: |
-    sudo apt-get install openjdk-8-jdk-headless
-    
     echo compiling...
-    javac uuuu.Password.java
-    echo running...
-    java Password
-  displayName: 'Run a multi-line script'
+    javac ActualJournal.java
+    javac AdditionAndSubsctraction.java
+    javac Col.java
+    javac Password.java
+    javac ServerClient.java
+    javac Stopwatch.java
+    javac Tip.java
+    javac TwoChat.java
+    javac WordRandomizer.java
+    javac Client.java
+    echo done compiling!
+  displayName: 'Compile'
 
