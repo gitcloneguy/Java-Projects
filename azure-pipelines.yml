@@ -25,6 +25,7 @@ steps:
     javac WordRandomizer.java
     javac Server.java
     echo done compiling!
-  failTaskOnFailedTests: true
+    if [ $? -ne 0 ]; then
+        exit 1
   displayName: 'Compile'
 
