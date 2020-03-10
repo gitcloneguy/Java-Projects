@@ -32,8 +32,11 @@ steps:
     
   condition: eq( variables['Agent.OS'], 'Windows_NT' )
   displayName: Get IP on Windows
+
+
 pool:
   vmImage: $(imageName)
+
 
 - script: |
     echo compiling...
