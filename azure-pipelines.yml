@@ -12,13 +12,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    sudo apt-get install openjdk-8-jdk-headless
-    ls
-    echo compiling...
-    javac Password.java
-    ls
-    echo running...
-    java Password
+    echo hello
   displayName: 'Run a multi-line script'
 - task: Gradle@2
   inputs:
