@@ -22,7 +22,7 @@ steps:
     javac Tip.java
     javac TwoChat.java
     javac WordRandomizer.java
-    javac Client.java
+    javac client.java
     echo done compiling!
   displayName: 'Compile'
 
