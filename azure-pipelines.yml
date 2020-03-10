@@ -2,7 +2,26 @@
 
 trigger:
 - master
-
+steps:
+# Linux
+- bash: |
+    sudo apt-get install openjdk-8-jdk-headless -y
+  condition: eq( variables['Agent.OS'], 'Linux' )
+  displayName: install jdk for linux
+# macOS
+- bash: |
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew tap homebrew/cask-versions
+    brew update
+    brew tap adoptopenjdk/openjdk
+    brew cask install adoptopenjdk8
+  condition: eq( variables['Agent.OS'], 'Darwin' )
+  displayName: install jdk for macos
+# Windows
+- powershell: |
+    echo hopefuly java is already installed
+  condition: eq( variables['Agent.OS'], 'Windows_NT' )
+  displayName: hopefully java is installed
  
 pool:
   vmImage: 'ubuntu-latest'
