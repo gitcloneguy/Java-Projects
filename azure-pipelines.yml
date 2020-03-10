@@ -27,16 +27,11 @@ steps:
     brew cask install adoptopenjdk8
   condition: eq( variables['Agent.OS'], 'Darwin' )
   displayName: install jdk for macos
-# Windows
-- powershell: |
-    
-  condition: eq( variables['Agent.OS'], 'Windows_NT' )
-  displayName: Get IP on Windows
+
 
 
 pool:
   vmImage: $(imageName)
-
 
 - script: |
     echo compiling...
@@ -52,4 +47,3 @@ pool:
     javac client.java
     echo done compiling!
   displayName: 'Compile'
-
