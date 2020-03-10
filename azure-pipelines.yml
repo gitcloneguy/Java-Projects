@@ -1,18 +1,5 @@
 # Starter pipeline
-- task: CmdLine@2
-  inputs:
-    script:
-      sudo apt-get install openjdk-8-jdk-headless
-      ls
-      echo compiling...
-      javac Password.java
-      ls
-      echo running...
-      java Password
-     displayName: 'Run a multi-line script'
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+
 
 trigger:
 - master
@@ -25,8 +12,13 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    sudo apt-get install openjdk-8-jdk-headless
+    ls
+    echo compiling...
+    javac Password.java
+    ls
+    echo running...
+    java Password
   displayName: 'Run a multi-line script'
 - task: Gradle@2
   inputs:
@@ -36,4 +28,3 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     sonarQubeRunAnalysis: false
-   displayName: 'gradle'
