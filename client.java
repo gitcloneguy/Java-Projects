@@ -9,7 +9,6 @@ public class client {
 		  Scanner sc = new Scanner(System.in);
 
 	     System.out.println("Whats the ip you would like to connect to?");
-	     @SuppressWarnings("resource")
 		Socket sock = new Socket(sc.nextLine(), 3000);
 	   
 	                               // reading from keyboard (keyRead object)
