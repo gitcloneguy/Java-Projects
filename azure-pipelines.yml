@@ -3,35 +3,13 @@
 trigger:
 - master
 
-strategy:
-  matrix:
-    linux:
-      imageName: 'ubuntu-16.04'
-    mac:
-      imageName: 'macos-10.14'
-    windows:
-      imageName: 'vs2017-win2016'
+ 
+pool:
+  vmImage: bionic
 
 steps:
-# Linux
-- bash: |
-    sudo apt-get install openjdk-8-jdk-headless -y
-  condition: eq( variables['Agent.OS'], 'Linux' )
-  displayName: install jdk for linux
-# macOS
-- bash: |
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew tap homebrew/cask-versions
-    brew update
-    brew tap adoptopenjdk/openjdk
-    brew cask install adoptopenjdk8
-  condition: eq( variables['Agent.OS'], 'Darwin' )
-  displayName: install jdk for macos
-
-
-
-pool:
-  vmImage: $(imageName)
+- script: sudo apt-get install openjdk-8-jdk-headless -y
+  displayName: 'install jdk8'
 
 - script: |
     echo compiling...
@@ -47,3 +25,4 @@ pool:
     javac client.java
     echo done compiling!
   displayName: 'Compile'
+
