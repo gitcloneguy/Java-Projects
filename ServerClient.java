@@ -4,7 +4,6 @@ import java.io.*;
 public class ServerClient {
 	
 	  public static void main(String[] args) throws IOException  {
-	      @SuppressWarnings("resource")
 		ServerSocket sersock = new ServerSocket(3000);
 	      System.out.println("Server  ready for chatting");
 	      System.out.println("The ip clients can connecct to is: " +Inet4Address.getLocalHost().getHostAddress());
