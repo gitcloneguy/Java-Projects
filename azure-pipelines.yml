@@ -5,7 +5,7 @@ trigger:
 
  
 pool:
-  vmImage: bionic
+  vmImage: xenial
 
 steps:
 - script: sudo apt-get install openjdk-8-jdk-headless -y
