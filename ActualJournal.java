@@ -1,4 +1,4 @@
-package journal;
+
 
 
 import java.io.UnsupportedEncodingException;
