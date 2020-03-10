@@ -1,4 +1,3 @@
-package uuuu;
 import java.util.Scanner;
 public class Tip {
 		public static void main(String[] args) {
