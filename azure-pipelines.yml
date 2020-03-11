@@ -25,5 +25,6 @@ steps:
     javac WordRandomizer.java
     javac Serverr.java
     echo done compiling!
+  failOnStderr: true
   displayName: 'Compile'
 
