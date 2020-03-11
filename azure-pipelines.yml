@@ -23,7 +23,7 @@ steps:
     javac Tip.java
     javac OhnoChat.java
     javac WordRandomizer.java
-    javac Serverr.java
+    javac Server.java
     echo done compiling!
   failOnStderr: true
   displayName: 'Compile'
