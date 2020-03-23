@@ -1,4 +1,4 @@
-
+package gui;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -71,34 +71,45 @@ public class OhnoChat extends javax.swing.JFrame {
 	    
 	    public static void main(String args[]) { 
 	    	int inp=JOptionPane.showConfirmDialog(null,"Do you want to host the chat?\nYes - Act as server\nNo - Act as client","Want to host a chat?",JOptionPane.YES_NO_OPTION);
-	        if(inp==0)
-	            {
+	        if(inp==0) {
 	            new OhnoChat(true,null).setVisible(true);
 	            }	
-	        else 
-	            {
+	        else {
 	            String ipstring=JOptionPane.showInputDialog("Please enter the ip address");
+	            
 	            try{
 	                InetAddress.getByName(ipstring);
 	                new OhnoChat(false,ipstring).setVisible(true);
 	            }catch(Exception e){JOptionPane.showMessageDialog(null,"Invalid or Unreachable IP");}
 	            }
 	        
+	        
 	    }
+	    
+	    String cliport=JOptionPane.showInputDialog("Please enter port no.");
+        int b =Integer.parseInt(cliport);
 
 
 	Thread Messenger=new Thread(){
 		public void run() {
 			try{
 				if(HorC) {
-					messages.setText("Waiting for an incoming connection.\nEnter my ip at client side.\nMy ip: "+InetAddress.getLocalHost().getHostAddress()+"\nPort that must be opened if clients arent on your local network is 9539 "); 
-					new EchoServer(9539);
-					s = new Socket("127.0.0.1",9539);
+					try {
+					String port=JOptionPane.showInputDialog("Please enter the port number");
+					int i = Integer.parseInt(port);
+					messages.setText("Waiting for an incoming connection.\nEnter my ip at client side.\nMy ip: "+InetAddress.getLocalHost().getHostAddress()+"\nPort that must be opened if clients arent on your local network is "+i); 
+					new EchoServer(i);
+					s = new Socket("127.0.0.1",i);
 					s.setKeepAlive(true);
+					}
+					catch(Exception e) {
+						JOptionPane.showMessageDialog(pt, e.getMessage(), "a",JOptionPane.ERROR_MESSAGE);
+						System.exit(0);
+					}
 				}
 				else {
-					messages.setText("Connecting to:"+ipstring+":9539"); 
-					s=new Socket(InetAddress.getByName(ipstring),9539);
+					messages.setText("Connecting to:"+ipstring+":"+b); 
+					s=new Socket(InetAddress.getByName(ipstring),b);
 				}
 				text.setEnabled(true);
 				pout = new PrintWriter(s.getOutputStream(),true);
