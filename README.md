@@ -1,7 +1,4 @@
-# Java-Projects
-My java projects
-[![CodeFactor](https://www.codefactor.io/repository/github/gitcloneguy/java-projects/badge)](https://www.codefactor.io/repository/github/gitcloneguy/java-projects)
-
-
-# Tests
-We use travis ci to test with maven test.
+# OhnoChat
+[![Build Status](https://travis-ci.com/gitcloneguy/ohnochat.svg?branch=master)](https://travis-ci.com/gitcloneguy/ohnochat)
+# Overview
+OhnoChat is a heavy work in progress chatting system. it hopes to see slider bars, encryption and images, fullscreen, best of all dark mode 
