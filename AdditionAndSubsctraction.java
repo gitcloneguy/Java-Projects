@@ -1,3 +1,4 @@
+package uuuu;
 import java.util.*;
 public class AdditionAndSubsctraction {
 
@@ -29,7 +30,7 @@ public class AdditionAndSubsctraction {
 					int c = a * b;
 
 					try {
-					System.out.println("what is " +a +" Ã— " +b +" =");
+					System.out.println("what is " +a +" × " +b +" =");
 					answers[i] = c;
 					
 					if(sc.nextInt()==c) {
@@ -55,7 +56,7 @@ public class AdditionAndSubsctraction {
 					int c = a / b;
 
 					try {
-					System.out.println("what is " +a +" Ã· " +b +" =");
+					System.out.println("what is " +a +" ÷ " +b +" =");
 					answers[i] = c;
 					
 					if(sc.nextInt()==c) {

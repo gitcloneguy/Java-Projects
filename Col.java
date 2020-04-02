@@ -1,3 +1,4 @@
+package uuuu;
 import java.util.Scanner;
 public class Col {
 		public static void main(String args[]) {
