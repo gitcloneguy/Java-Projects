@@ -1,10 +1,10 @@
 # Java-Projects
 My java projects
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/gitcloneguy/Java-Projects/graphs/commit-activity)
 [![CodeFactor](https://www.codefactor.io/repository/github/gitcloneguy/java-projects/badge)](https://www.codefactor.io/repository/github/gitcloneguy/java-projects)
 [![Build Status](https://dev.azure.com/gitcloneguy-java-projects/java-projects/_apis/build/status/gitcloneguy.Java-Projects?branchName=master)](https://dev.azure.com/gitcloneguy-java-projects/java-projects/_build/latest?definitionId=4&branchName=master)
 
-
+# Tests
+We use travis ci to test with maven test and azure pipelines to test with javac
 #  Azure pipelines with wora and compiling
  since java is run write once, run anywhare (WORA) if it compiles on inux it compiles everywhere
  if there is a problem in the code, that program shouldnt compile
